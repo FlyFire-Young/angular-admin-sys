@@ -13,7 +13,7 @@ export class CustomSiderComponent implements OnInit {
   locationHref = document.location.href;
 
   ngOnInit() {
-    this.setMenuOpen();
+    this.initSetMenuOpen();
   }
 
   @HostListener('click', ['$event.target'])
@@ -42,6 +42,25 @@ export class CustomSiderComponent implements OnInit {
         s.checkOpen = true;
       } else {
         s.checkOpen = false;
+      }
+    }
+  }
+
+  initSetMenuOpen() {
+    for (const m of this.menusCus) {
+      if (this.locationHref.indexOf(m.key) > -1) {
+        m.checkOpen = true;
+      }
+      if (m.sub.length > 0) {
+        this.initSetSubMenuSelect(m);
+      }
+    }
+  }
+
+  initSetSubMenuSelect(event: Menu) {
+    for (const s of event.sub) {
+      if (this.locationHref.indexOf(s.key) > -1) {
+        s.checkOpen = true;
       }
     }
   }

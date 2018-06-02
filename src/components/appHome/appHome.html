@@ -1,4 +1,85 @@
 <div class="application-outer-layer-div">
-  这是首页
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="6" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="注册人数" [nzExtra]="extraTemplate">
+        <div class="cus-home-r-top">
+          2018
+          <small>(人)</small>
+        </div>
+      </nz-card>
+      <ng-template #extraTemplate>
+        <nz-tag [nzColor]="'magenta'">今日新增</nz-tag>
+      </ng-template>
+    </div>
+
+    <div nz-col nzSpan="6" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="未读通知" [nzExtra]="emExtraTemplate">
+        <div class="cus-home-r-top">
+          20
+          <small>(条)</small>
+        </div>
+      </nz-card>
+      <ng-template #emExtraTemplate>
+        <nz-tag [nzColor]="'lime'">至今</nz-tag>
+      </ng-template>
+    </div>
+
+    <div nz-col nzSpan="6" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="访问人数" [nzExtra]="todayExtraTemplate">
+        <div class="cus-home-r-top">
+          20188
+          <small>(人)</small>
+        </div>
+      </nz-card>
+      <ng-template #todayExtraTemplate>
+        <nz-tag [nzColor]="'blue'">今日访问</nz-tag>
+      </ng-template>
+    </div>
+
+
+    <div nz-col nzSpan="6" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="流量统计" [nzExtra]="sysExtraTemplate">
+        <div class="cus-home-r-top">
+          8810232
+          <small></small>
+        </div>
+      </nz-card>
+      <ng-template #sysExtraTemplate>
+        <nz-tag [nzColor]="'purple'">至今</nz-tag>
+      </ng-template>
+    </div>
+  </div>
+
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="地图" [nzExtra]="mmExtraTemplate">
+        <div class="cus-home-r-top-chart">
+          <app-home-cf-baidu-map></app-home-cf-baidu-map>
+        </div>
+      </nz-card>
+      <ng-template #mmExtraTemplate>
+        <nz-tag [nzColor]="'#2db7f5'"><a>今日新增</a></nz-tag>
+      </ng-template>
+    </div>
+  </div>
+
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="12" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true">
+        <div class="cus-home-r-top-chart">
+          <app-home-cf-chart></app-home-cf-chart>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="12" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true">
+        <div class="cus-home-r-top-chart">
+          <app-home-cf-s-map></app-home-cf-s-map>
+        </div>
+      </nz-card>
+    </div>
+  </div>
+
 </div>
 

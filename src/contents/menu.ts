@@ -55,7 +55,7 @@ export const menusContent: Menu[] = [
     ],
   },
   {
-    key: '/cus/chart', title: '图表', icon: 'anticon anticon-star-o', checkOpen: false,
+    key: '/cus/chart', title: '图表', icon: 'anticon anticon-book', checkOpen: false,
     sub: [
       {key: '/cus/chart/viser', title: 'viser图表', icon: '', checkOpen: false},
       {key: '/cus/chart/wordCloud', title: '词云', icon: '', checkOpen: false},
@@ -68,7 +68,7 @@ export const menusContent: Menu[] = [
     ],
   },
   {
-    key: '/cus/richText', title: '富文本编辑器', icon: 'anticon anticon-star-o', checkOpen: false,
+    key: '/cus/richText', title: '富文本编辑器', icon: 'anticon anticon-edit', checkOpen: false,
     sub: [
       {key: '/cus/richText/quillIndex', title: 'quill 编辑器', icon: '', checkOpen: false},
       {key: '/cus/richText/ckeditorIndex', title: 'ckeditor 编辑器', icon: '', checkOpen: false},

@@ -11,14 +11,13 @@ import {HTTP} from './utils/httpUtil';
 import {ViserModule} from 'viser-ng';
 import { QuillModule } from 'ngx-quill';
 import { CKEditorModule, CKEditorComponent } from 'ng2-ckeditor';
+import {BaiduMapModule} from "angular2-baidu-map";
 import {HomeComponent} from './components/home';
 // 组建管理
 import {importComs} from './contents/comsManager';
 
 import {CommonModule, registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
-
-
 registerLocaleData(zh);
 
 @NgModule({
@@ -33,6 +32,7 @@ registerLocaleData(zh);
     ViserModule,
     QuillModule,
     CKEditorModule,
+    BaiduMapModule.forRoot({ ak: 'IDPsrfemMGHg9HFrTqGYutv2Rm8E9qVs' }),
     NgZorroAntdModule.forRoot()
   ],
   declarations: [

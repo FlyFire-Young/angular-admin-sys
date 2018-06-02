@@ -3,6 +3,9 @@ import {CustomSiderComponent} from '../components/siderBar/customSider';
 import {BreadcrumbComponent} from '../components/breadcrumbs/breadcrumb';
 import {BasicServerModalComponent} from '../components/modals/basicServerModal';
 import {BasicCusServerModalComponent} from '../components/modals/basicCusServerModal';
+import {ContrastiveFunnelChartsComponent} from "../components/appHome/contrastiveFunnelCharts";
+import {HomeStatisticMapComponent} from "../components/appHome/homeStatisticMap";
+import {HomeBaiduMapComponent} from "../components/appHome/homeBaiduMap";
 
 import {AppHomeComponent} from '../components/appHome/appHome';
 import {ButtonsComponent} from '../components/ui/buttons';
@@ -38,6 +41,9 @@ import {CkeditorIndexComponent} from '../components/richText/ckeditorIndex';
 const coms = {
   CustomHeaderComponent,
   CustomSiderComponent,
+  ContrastiveFunnelChartsComponent,
+  HomeStatisticMapComponent,
+  HomeBaiduMapComponent,
   BreadcrumbComponent,
   BasicServerModalComponent,
   BasicCusServerModalComponent,
@@ -76,6 +82,9 @@ const coms = {
 const importComs = [
   CustomHeaderComponent,
   CustomSiderComponent,
+  ContrastiveFunnelChartsComponent,
+  HomeStatisticMapComponent,
+  HomeBaiduMapComponent,
   BreadcrumbComponent,
   BasicServerModalComponent,
   BasicCusServerModalComponent,
@@ -136,9 +145,17 @@ const selectTables = {name: '/cus/tables/select', url: '/cus/tables/select', com
 const soselectTables = {name: '/cus/tables/soselect', url: '/cus/tables/soselect', component: SoTablesComponent};
 const ssselectTables = {name: '/cus/tables/ssselect', url: '/cus/tables/ssselect', component: SsTablesComponent};
 const seniorTables = {name: '/cus/tables/senior', url: '/cus/tables/senior', component: SeniorTablesComponent};
-const nestingTables = {name: '/cus/tables/nestingTables', url: '/cus/tables/nestingTables', component: NestingTablesComponent};
+const nestingTables = {
+  name: '/cus/tables/nestingTables',
+  url: '/cus/tables/nestingTables',
+  component: NestingTablesComponent
+};
 
-const internationalizations = {name: '/cus/internationalization/examples', url: '/cus/internationalization/examples', component: InternationalizationExamplesComponent};
+const internationalizations = {
+  name: '/cus/internationalization/examples',
+  url: '/cus/internationalization/examples',
+  component: InternationalizationExamplesComponent
+};
 
 const g2 = {name: '/cus/chart/viser', url: '/cus/chart/viser', component: ViserChartsComponent};
 const wordCloud = {name: '/cus/chart/wordCloud', url: '/cus/chart/wordCloud', component: WordCloudComponent};
@@ -146,7 +163,11 @@ const wordCloud = {name: '/cus/chart/wordCloud', url: '/cus/chart/wordCloud', co
 const basicModal = {name: '/cus/modals/basic', url: '/cus/modals/basic', component: BasicModalComponent};
 
 const quillIndex = {name: '/cus/richText/quillIndex', url: '/cus/richText/quillIndex', component: QuillIndexComponent};
-const ckeditorIndex = {name: '/cus/richText/ckeditorIndex', url: '/cus/richText/ckeditorIndex', component: CkeditorIndexComponent};
+const ckeditorIndex = {
+  name: '/cus/richText/ckeditorIndex',
+  url: '/cus/richText/ckeditorIndex',
+  component: CkeditorIndexComponent
+};
 
 const uiRouterContents = [
   appHome,
