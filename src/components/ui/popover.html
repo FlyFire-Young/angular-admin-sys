@@ -1,0 +1,143 @@
+<div class="application-outer-layer-div">
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="12个方向">
+        <div class="cus-index-margin-e">
+          <div style="margin-left: 60px">
+            <nz-popover [nzTitle]="'Title'" [nzPlacement]="'topLeft'">
+              <button nz-button nz-popover>TL</button>
+              <ng-template #nzTemplate>
+                <div><p>Content</p>
+                  <p>Content</p></div>
+              </ng-template>
+            </nz-popover>
+            <nz-popover [nzTitle]="'Title'" [nzPlacement]="'top'">
+              <button nz-button nz-popover>Top</button>
+              <ng-template #nzTemplate>
+                <div><p>Content</p>
+                  <p>Content</p></div>
+              </ng-template>
+            </nz-popover>
+            <nz-popover [nzTitle]="'Title'" [nzPlacement]="'topRight'">
+              <button nz-button nz-popover>TR</button>
+              <ng-template #nzTemplate>
+                <div><p>Content</p>
+                  <p>Content</p></div>
+              </ng-template>
+            </nz-popover>
+          </div>
+          <div style="width: 60px; float: left;">
+            <nz-popover [nzTitle]="'Title'" [nzPlacement]="'leftTop'">
+              <button nz-button nz-popover>LT</button>
+              <ng-template #nzTemplate>
+                <div><p>Content</p>
+                  <p>Content</p></div>
+              </ng-template>
+            </nz-popover>
+            <nz-popover [nzTitle]="'Title'" [nzPlacement]="'left'">
+              <button nz-button nz-popover>Left</button>
+              <ng-template #nzTemplate>
+                <div><p>Content</p>
+                  <p>Content</p></div>
+              </ng-template>
+            </nz-popover>
+            <nz-popover [nzTitle]="'Title'" [nzPlacement]="'leftBottom'">
+              <button nz-button nz-popover>LB</button>
+              <ng-template #nzTemplate>
+                <div><p>Content</p>
+                  <p>Content</p></div>
+              </ng-template>
+            </nz-popover>
+          </div>
+          <div style="width: 60px; margin-left: 252px;">
+            <nz-popover [nzTitle]="'Title'" [nzPlacement]="'rightTop'">
+              <button nz-button nz-popover>RT</button>
+              <ng-template #nzTemplate>
+                <div><p>Content</p>
+                  <p>Content</p></div>
+              </ng-template>
+            </nz-popover>
+            <nz-popover [nzTitle]="'Title'" [nzPlacement]="'right'">
+              <button nz-button nz-popover>Right</button>
+              <ng-template #nzTemplate>
+                <div><p>Content</p>
+                  <p>Content</p></div>
+              </ng-template>
+            </nz-popover>
+            <nz-popover [nzTitle]="'Title'" [nzPlacement]="'rightBottom'">
+              <button nz-button nz-popover>RB</button>
+              <ng-template #nzTemplate>
+                <div><p>Content</p>
+                  <p>Content</p></div>
+              </ng-template>
+            </nz-popover>
+          </div>
+          <div style="margin-left: 60px; clear: both;">
+            <nz-popover [nzTitle]="'Title'" [nzPlacement]="'bottomLeft'">
+              <button nz-button nz-popover>BL</button>
+              <ng-template #nzTemplate>
+                <div><p>Content</p>
+                  <p>Content</p></div>
+              </ng-template>
+            </nz-popover>
+            <nz-popover [nzTitle]="'Title'" [nzPlacement]="'bottom'">
+              <button nz-button nz-popover>Bottom</button>
+              <ng-template #nzTemplate>
+                <div><p>Content</p>
+                  <p>Content</p></div>
+              </ng-template>
+            </nz-popover>
+            <nz-popover [nzTitle]="'Title'" [nzPlacement]="'bottomRight'">
+              <button nz-button nz-popover>BR</button>
+              <ng-template #nzTemplate>
+                <div><p>Content</p>
+                  <p>Content</p></div>
+              </ng-template>
+            </nz-popover>
+          </div>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="三种触发方式">
+        <div class="cus-index-margin-e">
+          <nz-popover [nzTitle]="'Title'" [nzTrigger]="'click'">
+            <button nz-button nz-popover>Click me</button>
+            <ng-template #nzTemplate>
+              <div><p>Content</p>
+                <p>Content</p></div>
+            </ng-template>
+          </nz-popover>
+          <nz-popover [nzTitle]="'Title'" [nzTrigger]="'hover'">
+            <button nz-button nz-popover>Hover me</button>
+            <ng-template #nzTemplate>
+              <div><p>Content</p>
+                <p>Content</p></div>
+            </ng-template>
+          </nz-popover>
+          <nz-popover [nzTitle]="'Title'" [nzTrigger]="'focus'">
+            <button nz-button nz-popover>Focus me</button>
+            <ng-template #nzTemplate>
+              <div><p>Content</p>
+                <p>Content</p></div>
+            </ng-template>
+          </nz-popover>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="从浮层内关闭">
+        <div class="cus-index-margin-e">
+          <nz-popover [nzTitle]="'Title'" [(nzVisible)]="visible" [nzTrigger]="'click'">
+            <button nz-button nz-popover [nzType]="'primary'">Click me</button>
+            <ng-template #nzTemplate>
+              <a (click)='clickMe()'>Close</a>
+            </ng-template>
+          </nz-popover>
+        </div>
+      </nz-card>
+    </div>
+  </div>
+</div>

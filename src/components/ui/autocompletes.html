@@ -1,0 +1,61 @@
+<div class="application-outer-layer-div">
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="基本">
+        <div class="cus-index-margin-e">
+          <div class="example-input">
+            <input placeholder="input here" nz-input [(ngModel)]="inputValue" (input)="onInput($event.target?.value)"
+                   [nzAutocomplete]="auto">
+            <nz-autocomplete nzBackfill #auto>
+              <nz-auto-option *ngFor="let option of options" [nzValue]="option">
+                {{option}}
+              </nz-auto-option>
+            </nz-autocomplete>
+          </div>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="自定义">
+        <div class="cus-index-margin-e">
+          <div class="example-input">
+            <input placeholder="input here" nz-input [(ngModel)]="inputValueCus" (ngModelChange)="onChange($event)"
+                   [nzAutocomplete]="autoCus">
+            <nz-autocomplete #autoCus>
+              <nz-auto-option *ngFor="let option of optionsCus" [nzValue]="option">{{option}}</nz-auto-option>
+            </nz-autocomplete>
+          </div>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="查询">
+        <div class="cus-index-margin-e">
+          <nz-input-group nzSize="large" [nzSuffix]="suffixIcon">
+            <input placeholder="input here" nz-input [(ngModel)]="inputValueSer" (ngModelChange)="onChangeSer($event)"
+                   [nzAutocomplete]="autoSer"/>
+          </nz-input-group>
+          <ng-template #suffixIcon>
+            <i class="anticon anticon-search"></i>
+          </ng-template>
+          <nz-autocomplete #autoSer>
+            <nz-auto-optgroup *ngFor="let group of optionGroups" [nzLabel]="groupTitle">
+              <ng-template #groupTitle>
+            <span>{{group.title}}
+              <a class="more-link" href="https://www.google.com/search?q=ng+zorro" target="_blank">更多</a>
+            </span>
+              </ng-template>
+              <nz-auto-option *ngFor="let option of group.children" [nzLabel]="option.title" [nzValue]="option">
+                {{option.title}}
+                <span class="certain-search-item-count">{{option.count}} 人  关注</span>
+              </nz-auto-option>
+            </nz-auto-optgroup>
+          </nz-autocomplete>
+        </div>
+      </nz-card>
+    </div>
+
+  </div>
+</div>

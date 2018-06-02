@@ -1,0 +1,41 @@
+<div class="application-outer-layer-div">
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="选择和操作表格">
+        <div class="cus-index-margin-n">
+          <div style="margin-bottom: 16px;">
+            <button nz-button [disabled]="disabledButton" [nzType]="'primary'" [nzLoading]="operating"
+                    (click)="operateData()">
+              Reload
+            </button>
+            <span style="margin-left: 8px;" *ngIf="checkedNumber">Selected {{checkedNumber}} items</span>
+          </div>
+          <nz-table
+            #rowSelectionTable
+            [nzData]="dataSet"
+            (nzCurrentPageDataChange)="currentPageDataChange($event)"
+            (nzPageIndexChange)="refreshStatus()"
+            (nzPageSizeChange)="refreshStatus()">
+            <thead>
+            <tr>
+              <th nzShowCheckbox [(nzChecked)]="allChecked" [nzIndeterminate]="indeterminate"
+                  (nzCheckedChange)="checkAll($event)"></th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Address</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let data of rowSelectionTable.data">
+              <td nzShowCheckbox [(nzChecked)]="data.checked" (nzCheckedChange)="refreshStatus($event)"></td>
+              <td>{{data.name}}</td>
+              <td>{{data.age}}</td>
+              <td>{{data.address}}</td>
+            </tr>
+            </tbody>
+          </nz-table>
+        </div>
+      </nz-card>
+    </div>
+  </div>
+</div>

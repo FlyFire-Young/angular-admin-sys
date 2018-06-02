@@ -1,0 +1,86 @@
+<div class="application-outer-layer-div">
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true"  nzTitle="曲线折线图" >
+        <div class="cus-ver-charts">
+          <v-chart [forceFit]="forceFit" [height]="height" [data]="data" [scale]="scale">
+            <v-tooltip></v-tooltip>
+            <v-axis></v-axis>
+            <v-legend></v-legend>
+            <v-smooth-line position="month*temperature" color="city" shape="smooth"></v-smooth-line>
+            <v-point position="month*temperature" color="city" shape="circle"></v-point>
+          </v-chart>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true"  nzTitle="分组柱状图" >
+        <div class="cus-ver-charts">
+            <v-chart [forceFit]="forceFit" [height]="height" [data]="blockData">
+              <v-tooltip></v-tooltip>
+              <v-axis></v-axis>
+              <v-legend></v-legend>
+              <v-bar position="月份*月均降雨量" color="name" [adjust]="adjust"></v-bar>
+            </v-chart>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true"  nzTitle="玫瑰环图" >
+        <div class="cus-ver-charts">
+          <v-chart [forceFit]="forceFit" [height]="height" [data]="roseData">
+            <v-tooltip></v-tooltip>
+            <v-coord type="polar" [innerRadius]="0.2"></v-coord>
+            <v-sector position="year*population" [style]="sectorStyle" color="year"></v-sector>
+            <v-legend dataKey="year" position="right" [offsetX]="-140"></v-legend>
+          </v-chart>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true"  nzTitle="气泡图" >
+        <div class="cus-ver-charts">
+          <v-chart [forceFit]="true" [height]="400" [data]="bubbleData" [scale]="scaleBubble">
+            <v-tooltip [showTitle]="false"></v-tooltip>
+            <v-axis
+              dataKey="GDP"
+              [label]="axisLabel"
+            ></v-axis>
+            <v-legend dataKey="Population" [show]="false"></v-legend>
+            <v-point
+              position="GDP*LifeExpectancy"
+              [color]="pointColor"
+              [size]="pointSize"
+              [style]="pointStyle"
+              tooltip="Country*Population*GDP*LifeExpectancy"
+              shape="circle"
+            ></v-point>
+          </v-chart>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true"  nzTitle="区间面积图" >
+        <div class="cus-ver-charts">
+          <v-chart [forceFit]="forceFit" [height]="height" [scale]="iascale">
+            <v-tooltip [crosshairs]="iatooltipOpts.crosshairs"></v-tooltip>
+            <v-axis></v-axis>
+            <v-view [data]="iadata">
+              <v-area position="time*temperature" [tooltip]="false"></v-area>
+            </v-view>
+            <v-view [data]="iaaverages">
+              <v-axis [show]="false"></v-axis>
+              <v-line position="time*temperature" [size]="2"></v-line>
+              <v-point position="time*temperature" [size]="4" [style]="iapointStyle" shape="circle"></v-point>
+            </v-view>
+          </v-chart>
+        </div>
+      </nz-card>
+    </div>
+
+  </div>
+</div>

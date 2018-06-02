@@ -1,0 +1,15 @@
+<div class="application-outer-layer-div">
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true"  nzTitle="词云" >
+        <div class="cus-ver-charts">
+          <v-chart [width]="640" [height]="400" [data]="data" [scale]="scale" [padding]="padding">
+            <v-tooltip [showTitle]="false"></v-tooltip>
+            <v-coord type="rect" direction="TL"></v-coord>
+            <v-point position="x*y" [color]="'category'" shape="cloud" tooltip="value*category"></v-point>
+          </v-chart>
+        </div>
+      </nz-card>
+    </div>
+  </div>
+</div>

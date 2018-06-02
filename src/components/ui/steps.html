@@ -1,0 +1,65 @@
+<div class="application-outer-layer-div">
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="基本">
+        <div class="cus-index-margin-e">
+          <nz-steps>
+            <nz-step nzTitle="Finished" nzDescription="This is a description."></nz-step>
+            <nz-step nzTitle="In Progress" nzDescription="This is a description."></nz-step>
+            <nz-step nzTitle="Waiting" nzDescription="This is a description."></nz-step>
+          </nz-steps>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="迷你">
+        <div class="cus-index-margin-e">
+          <nz-steps [nzCurrent]="current" nzSize="small">
+            <nz-step nzTitle="Finished"></nz-step>
+            <nz-step nzTitle="In Progress"></nz-step>
+            <nz-step nzTitle="Waiting"></nz-step>
+          </nz-steps>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="带图标">
+        <div class="cus-index-margin-e">
+          <nz-steps>
+            <nz-step nzTitle="Login" nzStatus="finish" nzIcon="anticon anticon-user"></nz-step>
+            <nz-step nzTitle="Verification" nzStatus="finish" nzIcon="anticon anticon-solution"></nz-step>
+            <nz-step nzTitle="Pay" nzStatus="process" nzIcon="anticon anticon-spin anticon-loading"></nz-step>
+            <nz-step nzTitle="Done" nzStatus="wait" [nzIcon]="iconTemplate"></nz-step>
+            <ng-template #iconTemplate><i class="anticon anticon-smile-o"></i></ng-template>
+          </nz-steps>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="竖直方向">
+        <div class="cus-index-margin-e">
+          <nz-steps [nzCurrent]="1" nzDirection="vertical">
+            <nz-step nzTitle="Finished" nzDescription="This is a description."></nz-step>
+            <nz-step nzTitle="In Progress" nzDescription="This is a description."></nz-step>
+            <nz-step nzTitle="Waiting" nzDescription="This is a description."></nz-step>
+          </nz-steps>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="步骤运行错误">
+        <div class="cus-index-margin-e">
+          <nz-steps [nzCurrent]="1" nzStatus="error">
+            <nz-step nzTitle="Finished" nzDescription="This is a description."></nz-step>
+            <nz-step nzTitle="In Progress" nzDescription="This is a description."></nz-step>
+            <nz-step nzTitle="Waiting" nzDescription="This is a description."></nz-step>
+          </nz-steps>
+        </div>
+      </nz-card>
+    </div>
+  </div>
+</div>

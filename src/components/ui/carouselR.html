@@ -1,0 +1,44 @@
+<div class="application-outer-layer-div">
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="基本">
+        <div class="cus-index-margin-e cus-car">
+          <nz-carousel [nzEffect]="effect">
+            <div nz-carousel-content *ngFor="let index of arrayCus"><h3>{{index}}</h3></div>
+          </nz-carousel>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="垂直">
+        <div class="cus-index-margin-e cus-car">
+          <nz-carousel nzVertical>
+            <div nz-carousel-content *ngFor="let index of array"><h3>{{index}}</h3></div>
+          </nz-carousel>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="渐显">
+        <div class="cus-index-margin-e cus-car">
+          <nz-carousel [nzEffect]="'fade'">
+            <div nz-carousel-content *ngFor="let index of arrayTh"><h3>{{index}}</h3></div>
+          </nz-carousel>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="自动切换">
+        <div class="cus-index-margin-e cus-car">
+          <nz-carousel nzAutoPlay>
+            <div nz-carousel-content *ngFor="let index of arrayRa"><h3>{{index}}</h3></div>
+          </nz-carousel>
+        </div>
+      </nz-card>
+    </div>
+
+  </div>
+</div>

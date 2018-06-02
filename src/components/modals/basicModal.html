@@ -1,0 +1,45 @@
+<div class="application-outer-layer-div">
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="基本">
+        <div class="cus-modal-r">
+          <button nz-button [nzType]="'primary'" (click)="showModal()"><span>Show Modal</span></button>
+          <nz-modal [(nzVisible)]="isVisible" nzTitle="The first Modal" (nzOnCancel)="handleCancel()"
+                    (nzOnOk)="handleOk()">
+            <p>Content one</p>
+            <p>Content two</p>
+            <p>Content three</p>
+          </nz-modal>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="确认对话框">
+        <div class="cus-modal-r">
+          <button nz-button nzType="info" (click)="showConfirm()">Confirm</button>
+          <button nz-button nzType="dashed" (click)="showDeleteConfirm()">Delete</button>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="信息提示对话框">
+        <div class="cus-modal-r">
+          <button nz-button (click)="info()">Info</button>
+          <button nz-button (click)="success()">Success</button>
+          <button nz-button (click)="error()">Error</button>
+          <button nz-button (click)="warning()">Warning</button>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="高级对话框">
+        <div class="cus-modal-r">
+          <app-modal-service-cus></app-modal-service-cus>
+        </div>
+      </nz-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<nz-layout>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate">
+    <app-custom-sider [isCollapsed]="isCollapsed"></app-custom-sider>
+  </nz-sider>
+  <nz-layout>
+    <app-custom-header [isCollapsed]="isCollapsed"  (toggleEvent)="toggle($event)" [isMobile]="isMobile"></app-custom-header>
+    <nz-content style="margin:0 16px;">
+      <app-custom-breadcrumb [breadcrumbOne]="breadcrumbOne" [breadcrumbSecond]="breadcrumbSecond"></app-custom-breadcrumb>
+      <ui-view></ui-view>
+    </nz-content>
+    <nz-footer style="text-align: center;">Ant Design ©2017 Implement By Angular</nz-footer>
+  </nz-layout>
+</nz-layout>
+<ng-template #trigger>
+  <i class="anticon anticon-up"></i>
+</ng-template>

@@ -1,0 +1,61 @@
+<div class="application-outer-layer-div">
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="基本">
+        <div class="cus-index-margin-e">
+          <nz-select style="width: 120px;" [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="Choose">
+            <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+            <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+            <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option>
+          </nz-select>
+          <nz-select style="width: 120px;" [ngModel]="'lucy'" nzDisabled>
+            <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+          </nz-select>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="多选">
+        <div class="cus-index-margin-e">
+          <nz-select nzMode="tags" style="width: 100%;" nzPlaceHolder="Tag Mode" [(ngModel)]="listOfTagOptions">
+            <nz-option *ngFor="let option of listOfOption" [nzLabel]="option.label" [nzValue]="option.value">
+            </nz-option>
+          </nz-select>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="分组">
+        <div class="cus-index-margin-e">
+          <nz-select style="width: 120px;" [(ngModel)]="selectedValueG" nzAllowClear nzPlaceHolder="Choose">
+            <nz-option-group nzLabel="Manager">
+              <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+              <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+            </nz-option-group>
+            <nz-option-group nzLabel="Engineer">
+              <nz-option nzValue="Tom" nzLabel="tom"></nz-option>
+            </nz-option-group>
+          </nz-select>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="自定义">
+        <div class="cus-index-margin-e">
+          <nz-select style="width: 200px;" nzShowSearch nzAllowClear nzPlaceHolder="Select OS" [(ngModel)]="selectedOS">
+            <nz-option nzCustomContent nzLabel="Windows" nzValue="windows"><i class="anticon anticon-windows"></i>
+              Windows
+            </nz-option>
+            <nz-option nzCustomContent nzLabel="Mac" nzValue="mac"><i class="anticon anticon-apple"></i> Mac</nz-option>
+            <nz-option nzCustomContent nzLabel="Android" nzValue="android"><i class="anticon anticon-android"></i>
+              Android
+            </nz-option>
+          </nz-select>
+        </div>
+      </nz-card>
+    </div>
+  </div>
+</div>

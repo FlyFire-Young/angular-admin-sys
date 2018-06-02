@@ -1,0 +1,53 @@
+<div class="application-outer-layer-div">
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="基本">
+        <div class="cus-index-margin-e">
+          <label nz-radio>Radio</label>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="不可用">
+        <div class="cus-index-margin-e">
+          <label nz-radio [nzDisabled]="disabled">Disabled</label>
+          <br>
+          <label nz-radio [nzDisabled]="disabled" [ngModel]="true">Disabled</label>
+          <div style="margin-top:20px;">
+            <button nz-button nzType="primary" (click)="disabled=!disabled">Toggle disabled</button>
+          </div>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="单选组">
+        <div class="cus-index-margin-e">
+          <nz-radio-group [(ngModel)]="radioValue">
+            <label nz-radio nzValue="A">A</label>
+            <label nz-radio nzValue="B">B</label>
+            <label nz-radio nzValue="C">C</label>
+            <label nz-radio nzValue="D">D</label>
+          </nz-radio-group>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="垂直">
+        <div class="cus-index-margin-e">
+          <nz-radio-group [(ngModel)]="radioValueY">
+            <label nz-radio [ngStyle]="style" nzValue="A">Option A</label>
+            <label nz-radio [ngStyle]="style" nzValue="B">Option B</label>
+            <label nz-radio [ngStyle]="style" nzValue="C">Option C</label>
+            <label nz-radio [ngStyle]="style" nzValue="M">
+              More...
+              <input type="text" nz-input *ngIf="radioValueY=='M'" style="width: 100px; margin-left: 10px;">
+            </label>
+          </nz-radio-group>
+        </div>
+      </nz-card>
+    </div>
+  </div>
+</div>

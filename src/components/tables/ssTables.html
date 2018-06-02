@@ -1,0 +1,35 @@
+<div class="application-outer-layer-div">
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="可控的筛选和排序表格">
+        <div class="cus-index-margin-n">
+          <div class="table-operations">
+            <button nz-button (click)="sort('age','descend')">Sort age</button>
+            <button nz-button (click)="resetFilters()">Clear filters</button>
+            <button nz-button (click)="resetSortAndFilters()">Clear filters and sorters</button>
+          </div>
+          <nz-table #filterTable [nzData]="displayData">
+            <thead>
+            <tr>
+              <th nzShowSort nzShowFilter [(nzSort)]="sortMap.name" (nzSortChange)="sort('name',$event)"
+                  [nzFilters]="filterNameList" (nzFilterChange)="search($event,searchAddressList)">Name
+              </th>
+              <th nzShowSort [(nzSort)]="sortMap.age" (nzSortChange)="sort('age',$event)">Age</th>
+              <th nzShowSort nzShowFilter [(nzSort)]="sortMap.address" (nzSortChange)="sort('address',$event)"
+                  [nzFilters]="filterAddressList" (nzFilterChange)="search(searchNameList,$event)">Address
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let data of filterTable.data">
+              <td>{{data.name}}</td>
+              <td>{{data.age}}</td>
+              <td>{{data.address}}</td>
+            </tr>
+            </tbody>
+          </nz-table>
+        </div>
+      </nz-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="application-outer-layer-div">
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="ngx-quill editor">
+        <div class="cus-modal-editor">
+          <quill-editor [style]="{height: '200px'}" (onEditorCreated)="setFocus($event)"></quill-editor>
+        </div>
+      </nz-card>
+    </div>
+  </div>
+</div>
+

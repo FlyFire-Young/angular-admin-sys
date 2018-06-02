@@ -1,0 +1,52 @@
+<div class="application-outer-layer-div">
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="基本">
+        <div class="cus-index-margin-e">
+          <nz-rate [ngModel]="0"></nz-rate>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="半星">
+        <div class="cus-index-margin-e">
+          <nz-rate [ngModel]="2.5" nzAllowHalf></nz-rate>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="文案展示">
+        <div class="cus-index-margin-e">
+          <nz-rate [(ngModel)]="value" nzAllowHalf></nz-rate>
+          <span *ngIf="value" class="ant-rate-text">{{ value }} stars</span>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="只读">
+        <div class="cus-index-margin-e">
+          <nz-rate [ngModel]="2" nzDisabled></nz-rate>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="其他字符">
+        <div class="cus-index-margin-e">
+          <nz-rate [ngModel]="0" nzAllowHalf [nzCharacter]="characterIcon"></nz-rate>
+          <br>
+          <nz-rate [ngModel]="0" nzAllowHalf class="large" [nzCharacter]="characterEnLetter"></nz-rate>
+          <br>
+          <nz-rate [ngModel]="0" nzAllowHalf [nzCharacter]="characterZhLetter"></nz-rate>
+          <ng-template #characterIcon><i class="anticon anticon-heart"></i></ng-template>
+          <ng-template #characterZhLetter>好</ng-template>
+          <ng-template #characterEnLetter>A</ng-template>
+        </div>
+      </nz-card>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<ul>
+  <div *ngFor="let cus of menusCus">
+    <li *ngIf="cus.sub.length <= 0" nz-menu-item [nzSelected]="cus.checkOpen">
+      <a [uiSref]="cus.key" uiSrefActive="active" class="application-cus-real-dus-color">
+        <span>
+          <i [ngClass]="cus.icon"></i>
+          <span class="nav-text">{{cus.title}}</span>
+        </span>
+      </a>
+    </li>
+    <li *ngIf="cus.sub.length > 0" nz-menu-group>
+      <span title>
+        <i [ngClass]="cus.icon"></i>
+        <span class="nav-text">{{cus.title}}</span>
+      </span>
+      <ul *ngFor="let cusSub of cus.sub">
+        <li nz-menu-item [nzSelected]="cusSub.checkOpen">
+          <a [uiSref]="cusSub.key" uiSrefActive="active" class="nav-text"><i [ngClass]="cusSub.icon"></i>{{cusSub.title}}</a>
+        </li>
+      </ul>
+    </li>
+  </div>
+</ul>

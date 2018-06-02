@@ -1,0 +1,120 @@
+<div class="application-outer-layer-div">
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="基本">
+        <div class="cus-index-margin-e">
+          <input nz-input placeholder="Basic usage" [(ngModel)]="value">
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="前置后置标签">
+        <div class="cus-index-margin-e">
+          <div style="margin-bottom: 16px;">
+            <nz-input-group nzAddOnBefore="Http://" nzAddOnAfter=".com">
+              <input type="text" nz-input [(ngModel)]="inputValue">
+            </nz-input-group>
+          </div>
+          <div style="margin-bottom: 16px;">
+            <nz-input-group [nzAddOnBefore]="addOnBeforeTemplate" [nzAddOnAfter]="addOnAfterTemplate">
+              <input type="text" nz-input [(ngModel)]="inputValue">
+            </nz-input-group>
+            <ng-template #addOnBeforeTemplate>
+              <nz-select [ngModel]="'Http://'">
+                <nz-option [nzLabel]="'Http://'" [nzValue]="'Http://'"></nz-option>
+                <nz-option [nzLabel]="'Https://'" [nzValue]="'Https://'"></nz-option>
+              </nz-select>
+            </ng-template>
+            <ng-template #addOnAfterTemplate>
+              <nz-select [ngModel]="'.com'">
+                <nz-option [nzLabel]="'.com'" [nzValue]="'.com'"></nz-option>
+                <nz-option [nzLabel]="'.jp'" [nzValue]="'.jp'"></nz-option>
+                <nz-option [nzLabel]="'.cn'" [nzValue]="'.cn'"></nz-option>
+                <nz-option [nzLabel]="'.org'" [nzValue]="'.org'"></nz-option>
+              </nz-select>
+            </ng-template>
+          </div>
+          <div style="margin-bottom: 16px;">
+            <nz-input-group nzAddOnAfterIcon="anticon anticon-setting">
+              <input type="text" nz-input [(ngModel)]="inputValue">
+            </nz-input-group>
+          </div>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="输入框组合">
+        <div class="cus-index-margin-e">
+          <nz-input-group [nzSize]="'large'">
+            <div nz-col nzSpan="4">
+              <input type="text" nz-input [ngModel]="'0571'">
+            </div>
+            <div nz-col nzSpan="8">
+              <input type="text" nz-input [ngModel]="'26888888'">
+            </div>
+          </nz-input-group>
+          <br>
+          <nz-input-group nzCompact>
+            <input type="text" nz-input [ngModel]="'0571'" style="width: 20%;">
+            <input type="text" nz-input [ngModel]="'26888888'" style="width:30%;">
+          </nz-input-group>
+          <br>
+          <nz-input-group nzCompact>
+            <nz-select [ngModel]="'Zhejiang'">
+              <nz-option [nzLabel]="'Zhejiang'" [nzValue]="'Zhejiang'"></nz-option>
+              <nz-option [nzLabel]="'Jiangsu'" [nzValue]="'Jiangsu'"></nz-option>
+            </nz-select>
+            <input type="text" nz-input [ngModel]="'Xihu District, Hangzhou'" style="width:50%;">
+          </nz-input-group>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="搜索框">
+        <div>
+          <nz-input-group nzSuffixIcon="anticon anticon-search">
+            <input type="text" nz-input placeholder="input search text">
+          </nz-input-group>
+          <br>
+          <br>
+          <nz-input-group nzSearch [nzSuffix]="suffixIconButton">
+            <input type="text" nz-input placeholder="input search text">
+          </nz-input-group>
+          <ng-template #suffixIconButton>
+            <button nz-button nzType="primary" nzSearch><i class="anticon anticon-search"></i></button>
+          </ng-template>
+          <br>
+          <br>
+          <nz-input-group nzSearch nzSize="large" [nzSuffix]="suffixButton">
+            <input type="text" nz-input placeholder="input search text">
+          </nz-input-group>
+          <ng-template #suffixButton>
+            <button nz-button nzType="primary" nzSize="large" nzSearch>Search</button>
+          </ng-template>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="文本域">
+        <div class="cus-index-margin-e">
+          <textarea row="4" nz-input [(ngModel)]="inputValueTe"></textarea>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="格式化数字框">
+        <div class="cus-index-margin-e">
+          <nz-input-number [(ngModel)]="demoValue" [nzMin]="1" [nzMax]="100" [nzStep]="1"
+                           [nzFormatter]="formatterDollar" [nzParser]="parserDollar"></nz-input-number>
+          <nz-input-number [(ngModel)]="demoValue" [nzMin]="1" [nzMax]="100" [nzStep]="1"
+                           [nzFormatter]="formatterPercent" [nzParser]="parserPercent"></nz-input-number>
+        </div>
+      </nz-card>
+    </div>
+  </div>
+</div>

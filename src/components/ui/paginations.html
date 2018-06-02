@@ -1,0 +1,67 @@
+<div class="application-outer-layer-div">
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="基本">
+        <div class="cus-index-margin-e">
+          <nz-pagination [nzPageIndex]="1" [nzTotal]="50"></nz-pagination>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="改变">
+        <div class="cus-index-margin-e">
+          <nz-pagination [nzPageIndex]="3" [nzTotal]="500" nzShowSizeChanger [nzPageSize]="10"></nz-pagination>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="跳转">
+        <div class="cus-index-margin-e">
+          <nz-pagination [nzPageIndex]="2" [nzTotal]="500" nzShowQuickJumper></nz-pagination>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="页码">
+        <div class="cus-index-margin-e">
+          <nz-pagination [nzPageIndex]="1" [nzTotal]="85" [nzPageSize]="20"
+                         [nzShowTotal]="totalTemplate"></nz-pagination>
+          <br>
+          <nz-pagination [nzPageIndex]="1" [nzTotal]="85" [nzPageSize]="20"
+                         [nzShowTotal]="rangeTemplate"></nz-pagination>
+          <ng-template #totalTemplate let-total>
+            Total {{total}} items
+          </ng-template>
+          <ng-template #rangeTemplate let-range="range" let-total>
+            {{range[0]}}-{{range[1]}} of {{total}} items
+          </ng-template>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="简洁">
+        <div class="cus-index-margin-e">
+          <nz-pagination [nzPageIndex]="2" [nzTotal]="50" nzSimple></nz-pagination>
+        </div>
+      </nz-card>
+    </div>
+
+    <div nz-col nzSpan="24" class="cus-index-margin-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true" nzTitle="上一步下一步">
+        <div class="cus-index-margin-e">
+          <nz-pagination [nzPageIndex]="1" [nzTotal]="500" [nzItemRender]="renderItemTemplate"></nz-pagination>
+          <ng-template #renderItemTemplate let-type let-page="page">
+            <a *ngIf="type==='pre'">Previous</a>
+            <a *ngIf="type==='next'">Next</a>
+            <a *ngIf="type==='page'">{{page}}</a>
+          </ng-template>
+        </div>
+      </nz-card>
+    </div>
+
+  </div>
+</div>

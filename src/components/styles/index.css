@@ -1,0 +1,61 @@
+@import "carousel.css";
+@import "tables.css";
+@import "quill.snow.css";
+
+.ant-layout-sider {
+  background-color: #fff;
+}
+
+.layout-real-content-custom {
+  height: 100%;
+}
+
+:host ::ng-deep .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+:host ::ng-deep .trigger:hover {
+  color: #1890ff;
+}
+
+:host ::ng-deep .logo {
+  height: 32px;
+  /*background: rgba(255, 255, 255, .2);*/
+  margin: 16px;
+  background: url("../../assets/logo.png");
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+
+.cus-index-margin-e {
+  margin: 2.3%;
+}
+
+.cus-index-margin-e .ant-btn {
+  margin-right: 8px;
+  margin-bottom: 12px;
+}
+
+.cus-index-margin-top {
+  margin-top: 0.5%;
+}
+
+.cus-real-line-height {
+  line-height: 64px;
+}
+
+.cus-float-right {
+  float: right;
+}
+
+.breadcrumb-real-content-n {
+  margin: 15px;
+}
+
+.cus-top-80 {
+  margin-top: 80px;
+}
