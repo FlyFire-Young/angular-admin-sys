@@ -1,7 +1,3 @@
-/*
- Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
- For licensing, see LICENSE.html or http://ckeditor.com/license
-*/
 (function () {
   function z(a) {
     return a && a.domId && a.getInputElement().$ ? a.getInputElement() : a && a.$ ? a : !1
