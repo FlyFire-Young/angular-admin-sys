@@ -11,14 +11,18 @@ import {HTTP} from './utils/httpUtil';
 import {ViserModule} from 'viser-ng';
 import { QuillModule } from 'ngx-quill';
 import { CKEditorModule, CKEditorComponent } from 'ng2-ckeditor';
-import {BaiduMapModule} from "angular2-baidu-map";
+import {BaiduMapModule} from 'angular2-baidu-map';
 import {HomeComponent} from './components/home';
+import {LocalStorage} from './contents/localStorage';
 // 组建管理
 import {importComs} from './contents/comsManager';
+import { StoreModule } from '@ngrx/store';
+import {reducers, metaReducers} from './ngrxStore/reducer';
 
 import {CommonModule, registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
 registerLocaleData(zh);
+
 
 @NgModule({
   imports: [
@@ -32,6 +36,7 @@ registerLocaleData(zh);
     ViserModule,
     QuillModule,
     CKEditorModule,
+    StoreModule.forRoot(reducers, {metaReducers}),
     BaiduMapModule.forRoot({ ak: 'IDPsrfemMGHg9HFrTqGYutv2Rm8E9qVs' }),
     NgZorroAntdModule.forRoot()
   ],
@@ -40,7 +45,7 @@ registerLocaleData(zh);
     ...importComs,
 
   ],
-  providers: [HTTP, {provide: NZ_I18N, useValue: en_US}],
+  providers: [LocalStorage, HTTP, {provide: NZ_I18N, useValue: en_US}],
   bootstrap: [HomeComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })

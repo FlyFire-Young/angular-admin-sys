@@ -3,9 +3,9 @@ import {CustomSiderComponent} from '../components/siderBar/customSider';
 import {BreadcrumbComponent} from '../components/breadcrumbs/breadcrumb';
 import {BasicServerModalComponent} from '../components/modals/basicServerModal';
 import {BasicCusServerModalComponent} from '../components/modals/basicCusServerModal';
-import {ContrastiveFunnelChartsComponent} from "../components/appHome/contrastiveFunnelCharts";
-import {HomeStatisticMapComponent} from "../components/appHome/homeStatisticMap";
-import {HomeBaiduMapComponent} from "../components/appHome/homeBaiduMap";
+import {ContrastiveFunnelChartsComponent} from '../components/appHome/contrastiveFunnelCharts';
+import {HomeStatisticMapComponent} from '../components/appHome/homeStatisticMap';
+import {HomeBaiduMapComponent} from '../components/appHome/homeBaiduMap';
 
 import {AppHomeComponent} from '../components/appHome/appHome';
 import {ButtonsComponent} from '../components/ui/buttons';
@@ -37,6 +37,8 @@ import {WordCloudComponent} from '../components/charts/wordCloud';
 import {BasicModalComponent} from '../components/modals/basicModal';
 import {QuillIndexComponent} from '../components/richText/quillIndex';
 import {CkeditorIndexComponent} from '../components/richText/ckeditorIndex';
+import {NgstoreComponent} from '../components/ngStore/ngstore';
+import {LoginComponent} from '../components/pages/login';
 
 const coms = {
   CustomHeaderComponent,
@@ -76,7 +78,9 @@ const coms = {
   WordCloudComponent,
   BasicModalComponent,
   QuillIndexComponent,
-  CkeditorIndexComponent
+  CkeditorIndexComponent,
+  NgstoreComponent,
+  LoginComponent
 };
 
 const importComs = [
@@ -117,7 +121,9 @@ const importComs = [
   WordCloudComponent,
   BasicModalComponent,
   QuillIndexComponent,
-  CkeditorIndexComponent
+  CkeditorIndexComponent,
+  NgstoreComponent,
+  LoginComponent
 ];
 
 const appHome = {name: '/cus/home/index', url: '/cus/home/index', component: AppHomeComponent};
@@ -169,6 +175,18 @@ const ckeditorIndex = {
   component: CkeditorIndexComponent
 };
 
+const ngstoreIndex = {
+  name: '/cus/ngstore/index',
+  url: '/cus/ngstore/index',
+  component: NgstoreComponent
+};
+
+const login = {
+  name: '/cus/pages/login',
+  url: '/cus/pages/login',
+  component: LoginComponent
+};
+
 const uiRouterContents = [
   appHome,
   buttons,
@@ -199,7 +217,9 @@ const uiRouterContents = [
   wordCloud,
   basicModal,
   quillIndex,
-  ckeditorIndex
+  ckeditorIndex,
+  ngstoreIndex,
+  login
 ];
 
 const uiRouterContentsObject = {
@@ -232,7 +252,9 @@ const uiRouterContentsObject = {
   wordCloud,
   basicModal,
   quillIndex,
-  ckeditorIndex
+  ckeditorIndex,
+  ngstoreIndex,
+  login
 };
 
 export {coms, importComs, uiRouterContents, uiRouterContentsObject};

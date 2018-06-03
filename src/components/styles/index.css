@@ -1,6 +1,7 @@
 @import "carousel.css";
 @import "tables.css";
 @import "quill.snow.css";
+@import "login.css";
 
 .ant-layout-sider {
   background-color: #fff;

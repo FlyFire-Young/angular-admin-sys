@@ -1,0 +1,52 @@
+<!--<div class="application-outer-layer-div">-->
+<!--<div nz-row nzGutter="24">-->
+<!--<div nz-col nzSpan="24" class="cus-index-margin-top">-->
+<!--<nz-card [nzBordered]="false" [nzHoverable]="true"  nzTitle="示例" >-->
+<!---->
+<!--</nz-card>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<div class="application-outer-layer-div-login">
+  <div nz-row nzGutter="24">
+    <div nz-col nzSpan="6" class="cus-r-login-container-top">
+      <nz-card [nzBordered]="false" [nzHoverable]="true">
+        <div class="cus-r-login-container">
+          <div [hidden]="submitted">
+            <h1 class="cus-r-login-h1">后台管理系统</h1>
+            <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+              <div class="form-group cus-name-r-login">
+                <nz-input-group [nzSuffix]="suffixTemplate" nzPrefixIcon="anticon anticon-user">
+                  <input type="text" class="form-control" id="name" nz-input placeholder="请输入用户名(任意用户名)"
+                         required [(ngModel)]="model.name" name="name"
+                         #name="ngModel">
+                </nz-input-group>
+                <ng-template #suffixTemplate><i class="anticon anticon-close-circle" (click)="model.name=null"
+                                                *ngIf="model.name"></i></ng-template>
+                <div [hidden]="name.valid || name.pristine"
+                     class="alert alert-danger">
+                  用户名不能为空
+                </div>
+              </div>
+              <div class="form-group cus-name-r-psw">
+                <nz-input-group [nzSuffix]="suffixPawTemplate" nzPrefixIcon="anticon anticon-eye-o">
+                  <input type="text" class="form-control" id="password" nz-input placeholder="请输入密码(任意密码)"
+                         required [(ngModel)]="model.power" name="password"
+                         #password="ngModel">
+                </nz-input-group>
+                <ng-template #suffixPawTemplate><i class="anticon anticon-close-circle" (click)="model.power=null"
+                                                   *ngIf="model.power"></i></ng-template>
+
+                <div [hidden]="password.valid || password.pristine"
+                     class="alert alert-danger">
+                  密码不能为空
+                </div>
+              </div>
+              <button type="submit" class="cus-name-sub-margin-top" nz-button nzType="primary" [disabled]="!heroForm.form.valid">登  陆</button>
+            </form>
+          </div>
+        </div>
+      </nz-card>
+    </div>
+  </div>
+</div>

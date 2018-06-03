@@ -1,0 +1,43 @@
+.cus-name-r-login {
+
+}
+
+.alert-danger {
+  color: red;
+}
+
+.cus-name-sub-margin-top {
+  margin-top: 15px;
+}
+.cus-r-login-h1{
+  font-family: "Monospaced Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #2f54eb;
+  background: #f0f5ff;
+  border-radius: 4px;
+  border: 1px solid #adc6ff;
+}
+.cus-r-login-container-top .ant-card{
+  border: 1px solid  #91d5ff;
+  border-radius: 4px;
+  background: #e6f7ff;
+}
+.cus-name-r-psw {
+  margin-top: 15px;
+}
+
+.cus-r-login-container {
+
+}
+
+.application-outer-layer-div-login {
+  text-align: center;
+  height: 100%;
+  background: url("../../assets/loginback.jpg");
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+
+.cus-r-login-container-top {
+  text-align: center;
+  margin: 13% 0 0 40%;
+}

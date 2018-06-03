@@ -74,6 +74,18 @@ export const menusContent: Menu[] = [
       {key: '/cus/richText/ckeditorIndex', title: 'ckeditor 编辑器', icon: '', checkOpen: false},
     ],
   },
+  {
+    key: '/cus/ngstore', title: 'ngstore 工具', icon: 'anticon anticon-tool', checkOpen: false,
+    sub: [
+      {key: '/cus/ngstore/index', title: 'ngstore', icon: '', checkOpen: false},
+    ],
+  },
+  // {
+  //   key: '/cus/pages', title: '页面', icon: 'anticon anticon-tool', checkOpen: false,
+  //   sub: [
+  //     {key: '/cus/pages/login', title: '登陆', icon: '', checkOpen: false},
+  //   ],
+  // },
   // {
   //   key: '/cus/internationalization', title: '国际化', icon: 'anticon anticon-tag-o', checkOpen: false,
   //   sub: [
