@@ -8,7 +8,7 @@ import {uiRouterContents} from '../contents/comsManager';
     UIRouterModule.forRoot({
       states: [...uiRouterContents],
       useHash: true,
-      otherwise: '/cus/home/index'
+      otherwise: '/cus/pages/login'
     })
   ],
   exports: [
