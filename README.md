@@ -18,11 +18,11 @@ angular + ng-zorro-antd + antv组件库的后台管理系统。
 	|-- e2e                                                               // 测试
 	|-- src                                                               // 源码目录
 	|   |-- app                                                           // 源文件
-	|		|-- assets                   	                                    // static文件
-	|		|-- components                   	                                // 组件
-	|		|-- contents                 	                                    // 配置文件
-	|		|-- environments                  	                              // 源文件
-	|		|-- ngrxStore                 	                                  // ngstore
+	|	|-- assets                   	                                  // static文件
+	|	|-- components                   	                              // 组件
+	|	|-- contents                 	                                  // 配置文件
+	|	|-- environments                  	                              // 源文件
+	|	|-- ngrxStore                 	                                  // ngstore
 	|   |-- router                                                        // 路由
 	|   |-- utils                                                         // 跨域请求util
 	|   |-- favicon.ico                                                   // ico
